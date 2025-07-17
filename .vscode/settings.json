@@ -1,0 +1,49 @@
+{
+  "editor.formatOnSave": true,
+  "editor.rulers": [120],
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+  },
+  "editor.linkedEditing": true,
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "search.exclude": {
+    "**/.git": true,
+    "**/out": true,
+    "**/dist": true
+  },
+
+  "[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[jsonc]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[markdown]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[shellscript]": { "editor.defaultFormatter": "foxundermoon.shell-format" },
+  "[go]": {
+    "editor.defaultFormatter": "golang.go",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  },
+
+  "markdown.extension.toc.levels": "2..4",
+  "markdownlint.config": {
+    "MD030": false,
+    "MD033": {
+      "allowed_elements": ["table", "td", "tr", "strong"]
+    }
+  },
+
+  // --- Go ---
+  "go.lintTool": "golangci-lint",
+  "go.formatTool": "custom",
+  "go.alternateTools": {
+    "customFormatter": "golines"
+  },
+  "go.formatFlags": ["--base-formatter=gofumpt"],
+  "go.lintOnSave": "package",
+  "go.testFlags": ["-timeout=30m", "-count=1", "-v"],
+  "go.toolsManagement.autoUpdate": true,
+  "go.addTags": {
+    "transform": "camelcase"
+  }
+}
